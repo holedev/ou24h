@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>24h</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="./assets/css/base.css" />
+    </head>
+    <body>
+        <div class="app">
+            <header class="header">
+                <div class="grid header-grid">
+                    <div class="header-left">
+                        <a href="index.html">
+                            <img
+                                src="./assets/img/logo-demo.png"
+                                alt=""
+                                class="header-left__logo"
+                            />
+                        </a>
+                    </div>
+                    <div class="header-mobile">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="header-right">
+                        <ul class="header-right__list">
+                            <li class="home header-right__item">
+                                <a onclick="return false" href="">
+                                    Trang chủ
+                                </a>
+                            </li>
+                            <li class="intro header-right__item">
+                                <a onclick="return false" href="">
+                                    Giới thiệu
+                                </a>
+                            </li>
+                            <li class="pet header-right__item">
+                                <a onclick="return false" href=""> Thú cưng </a>
+                            </li>
+                            <li class="contact header-right__item">
+                                <a onclick="return false" href=""> Liên hệ </a>
+                            </li>
+                            <li class="contact header-right__item">
+                                <a href="page_Game.html" target="_blank">
+                                    Giải trí
+                                </a>
+                            </li>
+                            <li class="shop header-right__item">
+                                <span> Cửa hàng </span>
+                                <span class="header-right__item-more">
+                                    <span class="header-right__item-icon__add">
+                                        +
+                                    </span>
+                                    <span
+                                        style="display: none"
+                                        class="header-right__item-icon__sub"
+                                    >
+                                        -
+                                    </span>
+                                </span>
+                                <ul class="header-right__item-more-list">
+                                    <li class="header-right__item-more-item">
+                                        <a target="_blank" href="shopee.html">
+                                            Mua bán chó
+                                        </a>
+                                    </li>
+                                    <li class="header-right__item-more-item">
+                                        <a target="_blank" href="catShop.html">
+                                            Mua bán mèo
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="header-right__search">
+                            <div
+                                onclick="openSearch()"
+                                class="header-right__search-icon"
+                            >
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                        <div class="search-960">
+                            <input
+                                placeholder="Tìm kiếm"
+                                type="text"
+                                class="search-960__input"
+                            />
+                            <div class="search-960__icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-box">
+                    <div onclick="closeSearch()" class="search-box__close">
+                        <i class="far fa-times-circle"></i>
+                    </div>
+                    <div class="search-box__form">
+                        <input
+                            type="text"
+                            class="search-box__form-input"
+                            name="search"
+                            placeholder=" "
+                        />
+                        <label class="search-box__form-label" for="name"
+                            >Type then hit enter to search</label
+                        >
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <script src="./assets/js/app.js"></script>
+    </body>
+</html>
