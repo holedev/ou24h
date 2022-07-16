@@ -48,6 +48,28 @@
                                         Lê Hồ
                                     </div>
                                 </div>
+                                <div class="header-right__submenu">
+                                    <div
+                                        class="submenu-item submenu-item--edit"
+                                    >
+                                        <div class="submenu-item__icon">
+                                            <i class="fa-solid fa-user-pen"></i>
+                                        </div>
+                                        <div class="submenu-item__text">
+                                            Sửa thông tin
+                                        </div>
+                                    </div>
+                                    <div class="submenu-item">
+                                        <div class="submenu-item__icon">
+                                            <i
+                                                class="fa-solid fa-power-off"
+                                            ></i>
+                                        </div>
+                                        <div class="submenu-item__text">
+                                            Thoát
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -55,7 +77,9 @@
                 <div class="main">
                     <div class="main-grid grid">
                         <div class="main-left">
-                            <div class="main-left__item active">
+                            <div
+                                class="main-left__item active main-left__item--event"
+                            >
                                 <div class="main-left__item-icon">
                                     <i class="fa-solid fa-calendar"></i>
                                 </div>
@@ -72,7 +96,7 @@
                         <div class="main-right">
                             <div class="event">
                                 <div class="event-type">Đang diễn ra</div>
-                                <div class="event-list">
+                                <div class="event-list event-list--now">
                                     <div class="event-item">
                                         <div class="event-item__bg">
                                             <img
@@ -195,7 +219,7 @@
                                     </div>
                                 </div>
                                 <div class="event-type">Sắp diễn ra</div>
-                                <div class="event-list">
+                                <div class="event-list event-list--incoming">
                                     <div class="event-item">
                                         <div class="event-item__bg">
                                             <img
@@ -376,7 +400,320 @@
                     </div>
                 </div>
                 <footer class="footer"></footer>
+                <div class="overplay">
+                    <div class="overplay-body gird">
+                        <div class="box-edit">
+                            <div class="box-edit__head">
+                                <div class="box-edit__head-title">
+                                    Sửa thông tin
+                                </div>
+                                <div
+                                    class="box-edit__head-close-btn close-overplay"
+                                >
+                                    <i class="fa-solid fa-circle-xmark"></i>
+                                </div>
+                            </div>
+                            <div class="box-edit__body">
+                                <div class="box-edit__group">
+                                    <label class="box-edit__label" for="name"
+                                        >Họ và tên:</label
+                                    >
+                                    <input
+                                        id="name"
+                                        type="text"
+                                        class="box-edit__inp"
+                                    />
+                                </div>
+                                <div class="box-edit__group">
+                                    <label class="box-edit__label" for="mssv"
+                                        >MSSV:</label
+                                    >
+                                    <input
+                                        id="mssv"
+                                        type="text"
+                                        class="box-edit__inp"
+                                    />
+                                </div>
+                                <div class="box-edit__group">
+                                    <label class="box-edit__label" for="major"
+                                        >Khoa:</label
+                                    >
+                                    <input
+                                        id="major"
+                                        type="text"
+                                        class="box-edit__inp"
+                                    />
+                                </div>
+                                <div class="box-edit__group">
+                                    <label
+                                        class="box-edit__label"
+                                        for="classUser"
+                                        >Lớp:</label
+                                    >
+                                    <input
+                                        id="classUser"
+                                        type="text"
+                                        class="box-edit__inp"
+                                    />
+                                </div>
+                                <div class="box-edit__group">
+                                    <label class="box-edit__label" for="course"
+                                        >Khóa:</label
+                                    >
+                                    <input
+                                        id="course"
+                                        type="text"
+                                        class="box-edit__inp"
+                                    />
+                                </div>
+                                <div class="box-edit__group">
+                                    <label class="box-edit__label" for="idCard"
+                                        >CCCD:</label
+                                    >
+                                    <input
+                                        id="idCard"
+                                        type="text"
+                                        class="box-edit__inp"
+                                    />
+                                </div>
+                                <div class="box-edit__group">
+                                    <label class="box-edit__label" for="phone"
+                                        >Số điện thoại:</label
+                                    >
+                                    <input
+                                        id="phone"
+                                        type="text"
+                                        class="box-edit__inp"
+                                    />
+                                </div>
+                                <div class="box-edit__group">
+                                    <label class="box-edit__label" for="address"
+                                        >Địa chỉ:</label
+                                    >
+                                    <input
+                                        id="address"
+                                        type="text"
+                                        class="box-edit__inp"
+                                    />
+                                </div>
+                                <div class="box-edit__group">
+                                    <label class="box-edit__label" for="bank"
+                                        >Ngân hàng:</label
+                                    >
+                                    <input
+                                        id="bank"
+                                        type="text"
+                                        class="box-edit__inp"
+                                    />
+                                </div>
+                                <div class="box-edit__group">
+                                    <label class="box-edit__label" for="stk"
+                                        >Số tài khoản:</label
+                                    >
+                                    <input
+                                        id="stk"
+                                        type="text"
+                                        class="box-edit__inp"
+                                    />
+                                </div>
+                            </div>
+                            <div class="box-edit__footer">
+                                <div class="box-edit__btn-submit">Cập nhật</div>
+                            </div>
+                        </div>
+                        <div class="box-event">
+                            <div class="box-event__left">
+                                <div class="box-event__bg">
+                                    <img src="./assets/img/bg24h.jpg" alt="" />
+                                </div>
+                            </div>
+                            <div class="box-event__right">
+                                <div class="box-event__head">
+                                    <div class="box-event__head-left">
+                                        <div class="box-event__item active">
+                                            <div
+                                                class="box-event__head__item-icon"
+                                            >
+                                                <i
+                                                    class="fa-solid fa-feather"
+                                                ></i>
+                                            </div>
+                                            <div
+                                                class="box-event__head__item-text"
+                                            >
+                                                Đăng ký
+                                            </div>
+                                        </div>
+                                        <div class="box-event__item">
+                                            <div
+                                                class="box-event__head__item-icon"
+                                            >
+                                                <i
+                                                    class="fa-solid fa-qrcode"
+                                                ></i>
+                                            </div>
+                                            <div
+                                                class="box-event__head__item-text"
+                                            >
+                                                Điểm danh
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box-event__head-right">
+                                        <div
+                                            class="box-event__close-btn close-overplay"
+                                        >
+                                            <i
+                                                class="fa-solid fa-circle-xmark"
+                                            ></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-event__details">
+                                    Cuộc thi “GIẢI PHÁP PHẦN MỀM 24H” là một sân
+                                    chơi trí tuệ, sáng tạo do khoa Công nghệ
+                                    Thông tin tổ chức dành cho các bạn sinh viên
+                                    đam mê và muốn nâng cao kỹ năng tư duy lập
+                                    trình. Đây là nơi các đội thi mang đến ý
+                                    tưởng và giải pháp cho các vấn đề trong cuộc
+                                    sống; trong 24 giờ, cùng nhau xây dựng
+                                    chương trình, cách giải quyết hiệu quả cho
+                                    đề bài mà BTC đưa ra. <br />[THÔNG TIN VỀ
+                                    CUỘC THI] <br />▶ Thời gian đăng ký:
+                                    �𝟱/𝟬𝟲/𝟮𝟬𝟮𝟮 - �𝟭𝟰/𝟬𝟳/𝟮𝟬𝟮𝟮 <br />▶ Hình thức
+                                    đăng ký: Đăng ký theo đội, tối thiểu 2
+                                    người, tối đa 3 người hoặc đăng ký cá nhân
+                                    (BTC sẽ hỗ trợ kết đội ngẫu nhiên cho những
+                                    bạn đăng ký theo hình thức cá nhân) <br />▶
+                                    Đối tượng tham gia: Sinh viên Trường Đại Học
+                                    Mở TPHCM <br />▶ Quyền lợi: Nhận ngay 5 ĐRL
+                                    vào HK3/2021-2022 (Tiêu chí Học Tập Tốt để
+                                    xét học bổng SV5T) . <br />⏰ Thời gian dự
+                                    thi: 𝟭𝟲/𝟬𝟳/𝟮𝟬𝟮𝟮 - 𝟭𝟳/𝟬𝟳/𝟮𝟬𝟮𝟮 <br />🏫 Địa
+                                    điểm: cơ sở 371 Nguyễn Kiệm.
+                                    <br />-------------------------------------
+                                    <br />Mọi thắc mắc vui lòng liên hệ:
+                                    <br />💌 Fanpage: Kênh Thông Tin - Sự Kiện
+                                    khoa CNTT Đại học Mở Tp.HCM <br />📞 Số điện
+                                    thoại: <br />0827104516 (Trang Nhung -
+                                    Trưởng BTC) <br />0393617000 (Mai Linh - Phó
+                                    BTC)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-achievement">
+                            <div class="box-achievement__head">
+                                <div class="box-achievement__head-title">
+                                    Học bổng sinh viên 5 tốt
+                                </div>
+                                <div
+                                    class="box-achievement__head-close-btn close-overplay"
+                                >
+                                    <i class="fa-solid fa-circle-xmark"></i>
+                                </div>
+                            </div>
+                            <div class="box-achievement__body">
+                                <div class="box-achievement__left">
+                                    <div
+                                        class="box-achievement__left-item active"
+                                    >
+                                        Cấp Khoa
+                                    </div>
+                                    <div class="box-achievement__left-item">
+                                        Cấp Trường
+                                    </div>
+                                    <div class="box-achievement__left-item">
+                                        Cấp Thành phố
+                                    </div>
+                                    <div class="box-achievement__left-item">
+                                        Cấp Trung ương
+                                    </div>
+                                </div>
+                                <div class="box-achievement__right">
+                                    <div class="wrap">
+                                        <div
+                                            class="box-achievement__right-list"
+                                        >
+                                            <div
+                                                class="box-achievement__right-item active"
+                                            >
+                                                <i
+                                                    class="fa-solid fa-circle-check"
+                                                ></i>
+                                                <span>
+                                                    Danh hiệu Đạo đức tốt cấp
+                                                    Khoa trở lên.
+                                                </span>
+                                            </div>
+                                            <div
+                                                class="box-achievement__right-item"
+                                                title="Hiện đang diễn ra sự kiện GPPM 24h 2022 có thể tìm kiếm danh hiệu này. Tham gia ngay?"
+                                            >
+                                                <i
+                                                    class="fa-solid fa-circle-check"
+                                                ></i>
+                                                <span>
+                                                    Danh hiệu Học tập tốt cấp
+                                                    Khoa trở lên.
+                                                </span>
+                                            </div>
+                                            <div
+                                                class="box-achievement__right-item active"
+                                            >
+                                                <i
+                                                    class="fa-solid fa-circle-check"
+                                                ></i>
+                                                <span>
+                                                    Danh hiệu Thể lực tốt cấp
+                                                    Khoa trở lên.
+                                                </span>
+                                            </div>
+                                            <div
+                                                class="box-achievement__right-item"
+                                                title="Hiện không có sự kiện nào để tìm kiếm danh hiệu này!"
+                                            >
+                                                <i
+                                                    class="fa-solid fa-circle-check"
+                                                ></i>
+                                                <span>
+                                                    Danh hiệu Tình nguyện tốt
+                                                    cấp Khoa trở lên.
+                                                </span>
+                                            </div>
+                                            <div
+                                                class="box-achievement__right-item"
+                                                title="Hiện không có sự kiện nào để tìm kiếm danh hiệu này!"
+                                            >
+                                                <i
+                                                    class="fa-solid fa-circle-check"
+                                                ></i>
+                                                <span>
+                                                    Danh hiệu Hội nhập tốt cấp
+                                                    Khoa trở lên.
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="box-achievement__right-total"
+                                        >
+                                            <div></div>
+                                            <span class="text">40%</span>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="box-achievement__right-submit-btn"
+                                    >
+                                        Đăng ký xét duyệt học bổng <br />
+                                        <div>1.000.000đ</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <script src="./assets/js/app.js"></script>
     </body>
 </html>
