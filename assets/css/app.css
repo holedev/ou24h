@@ -131,6 +131,7 @@
 
 .main-grid {
     display: flex;
+    gap: 20px;
 }
 
 .main-left {
@@ -170,6 +171,146 @@
 
 .main-right {
     flex: 1;
+}
+
+.event {
+    display: none;
+}
+
+.event-type {
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+.event-list {
+    --gap: 6px;
+    --item: 4;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(var(--gap) * -1);
+}
+
+.event-type + .event-list {
+    margin-top: 12px;
+}
+
+.event-list + .event-type {
+    margin-top: 20px;
+}
+
+.event-item {
+    margin-left: var(--gap);
+    width: calc((100% / var(--item)) - var(--gap));
+    border-radius: 20px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.05);
+    transition: all linear 0.25s;
+    transition-delay: 0.3s;
+}
+
+.event-item:hover {
+    cursor: pointer;
+    transform: translateY(-4px);
+}
+
+.event-item__bg {
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    height: 170px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.event-item__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.event-item__info {
+    display: flex;
+    align-items: center;
+    padding: 4px 16px;
+}
+
+.event-item__title {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.event-item__more {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.event-item__icon {
+    text-align: center;
+}
+
+.event-item__icon.qrcode {
+    margin-top: 4px;
+}
+
+.event-item__icon.checked {
+    color: var(--primary-color);
+}
+
+.event-item__time {
+    margin-top: 4px;
+    text-align: center;
+    font-style: italic;
+}
+
+.achievement-list {
+    --gap: 6px;
+    --item: 4;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(var(--gap) * -1);
+}
+
+.achievement-item {
+    margin-left: var(--gap);
+    width: calc((100% / var(--item)) - var(--gap));
+    border-radius: 20px;
+    transition: all linear 0.25s;
+    transition-delay: 0.3s;
+}
+
+.achievement-item__img {
+}
+
+.achievement-item__img img {
+    width: 100%;
+}
+
+.achievement-item.progress {
+    position: relative;
+    transition: all linear 0.25s;
+    overflow: hidden;
+}
+
+.achievement-item.progress::before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #74a7fb;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: all linear 0.25s;
+    transition-delay: 0.1s;
+}
+
+.achievement-item.progress:hover {
+    border: 1px solid #ccc;
+}
+
+.achievement-item.progress:hover::before {
+    transform: scaleX(var(--ratio));
 }
 
 /* ------------------------------------- */
