@@ -337,6 +337,7 @@
 }
 
 .achievement-item {
+    margin-top: 12px;
     margin-left: var(--gap);
     width: calc((100% / var(--item)) - var(--gap));
     border-radius: 20px;
