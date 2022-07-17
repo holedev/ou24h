@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     background: var(--bg-color);
+    overflow: hidden;
 }
 
 .wrapper {
@@ -131,6 +132,8 @@
     pointer-events: none;
     transition: all ease 0.25s;
     transform-origin: calc(100% - 10px) top;
+    z-index: 10;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.05);
 }
 
 .header-right__item:hover .header-right__submenu {
@@ -238,6 +241,7 @@
 
 .event {
     display: block;
+    position: relative;
 }
 
 .achievement {
@@ -326,6 +330,106 @@
     margin-top: 4px;
     text-align: center;
     font-style: italic;
+}
+
+.event-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    border-radius: 20px 0 0 20px;
+    width: 300px;
+    padding: 12px 20px;
+    transform: translateX(100%);
+    transition: all linear 0.25s;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+.event-right.active {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    user-select: auto;
+}
+
+.event-right__title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.event-right__group {
+}
+
+.event-right__group + .event-right__group {
+    margin-top: 12px;
+}
+
+.event-right__head {
+    display: flex;
+    align-items: center;
+}
+
+.event-right__head .span {
+    flex: 1;
+    height: 1px;
+    background: #000;
+}
+
+.event-right__type {
+    font-size: 1.2rem;
+    width: fit-content;
+    margin-right: 12px;
+}
+
+.event-right__list {
+}
+
+.event-right__item {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.event-right__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.event-right__left {
+}
+.event-right__right {
+    border-left: 1px solid #ccc;
+    padding-left: 15px;
+}
+
+.event-right__text {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.event-right-btn {
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-right-btn:hover {
+    cursor: pointer;
 }
 
 .achievement-list {
@@ -738,26 +842,27 @@
 }
 
 .box-achievement__right-total div {
-    border: 3px solid hsla(185, 100%, 62%, 0.2);
-    border-top-color: var(--primary-color);
+    background-image: conic-gradient(var(--primary-color) 40%, #fff 0);
     border-radius: 50%;
+    overflow: hidden;
     width: 60px;
     height: 60px;
-    animation: spin 1s linear infinite;
     position: relative;
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
+    border: 1px solid #ccc;
 }
 
 .box-achievement__right-total span.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #fff;
 }
 
 .box-achievement__right-submit-btn {

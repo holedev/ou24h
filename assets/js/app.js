@@ -62,6 +62,9 @@ const app = (() => {
             achievementItems.forEach((e) => (e.onclick = showAchievementBox));
 
             $$(".close-overplay").forEach((i) => (i.onclick = hideOverplay));
+            $(".event-right-btn").onclick = () => {
+                $(".event-right").classList.toggle("active");
+            };
         },
         start() {
             this.handle();
